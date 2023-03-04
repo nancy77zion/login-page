@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  <body>
+      <div class="card" id="card">
+        <div class="inner-box">
+          <div class="card-front" id="login">
+            <h2>LOGIN</h2>
+            <form>
+              <input type="email" class="input-box" placeholder="your emal" required>
+               <input type="password" class="input-box" placeholder="password" required>
+              <button type="submit" class="submit-btn">Submit</button>
+              <input type="checkbox"><span>Remember Me</span>
+              <button type="button" onclick="openRegister" class="btn">I'm New Here</button>
+              <a href="">Forget password</a>
+            </form>
+          </div>
+          <div class="card-back">
+            <h2>REGISTER</h2>
+            <form>
+              <input type="text" class="input-box" placeholder="first name" required>
+               <input type="text" class="input-box" placeholder="last name" required>
+               <input type="tel" class="input-box" placeholder="phone number" required>
+               <input type="email" class="input-box" placeholder="email" required>
+               <input type="password" class="input-box" placeholder="password" required>
+            
+              <button type="submit" class="submit-btn">Submit</button>
+              <input type="checkbox"><span>Remember Me</span>
+              <button type="button" onclick="openLogin" class="btn"> Already a member?Login now</button>
+              <a href="">Forgot password</a>
+            </form>
+           </div>
+        </div>
+      </div>
+    <script>
+         var cardTurn = document.getElementById("card");
+
+        function openRegister(){
+             cardTurn.style.transform = ("rotateY(-180deg)");
+            }
+        function openLogin(){
+            cardTurn.style.transform = ("rotateY(0deg)");
+            }
+    </script>
+  </body>
+</html>
